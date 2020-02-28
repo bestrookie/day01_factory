@@ -31,7 +31,6 @@ public class BeanFactory {
         Object bean = null;
         try {
             String beanPath = props.getProperty(beanName);
-            System.out.println(beanPath);
             bean = Class.forName(beanPath).newInstance();
         }catch (Exception e){
             e.printStackTrace();
